@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "332900438923",
+    "project_id": "brightmind-1e4fd",
+    "storage_bucket": "brightmind-1e4fd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332900438923:android:ee9e87846922d546f9958e",
+        "android_client_info": {
+          "package_name": "com.example.brightmind"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvFWWNIR3X5gUWsCT5t9syF1Fd-WYmqoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
