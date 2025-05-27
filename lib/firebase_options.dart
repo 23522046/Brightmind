@@ -71,4 +71,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'brightmind-1e4fd.firebasestorage.app',
     iosBundleId: 'com.example.brightmind',
   );
+
 }
