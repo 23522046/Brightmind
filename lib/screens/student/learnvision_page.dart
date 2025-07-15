@@ -1,129 +1,137 @@
+import 'dart:convert';
+import 'package:brightmind/models/video_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class VideoItem {
-  final String id;
-  final String title;
-  final String thumbnailUrl;
-  final String duration;
-
-  VideoItem({
-    required this.id,
-    required this.title,
-    required this.thumbnailUrl,
-    required this.duration,
-  });
-}
-
-final List<VideoItem> videos = [
-  VideoItem(
-    id: '1',
-    title: 'Video Motivasi Pendidikan Siswa-Siswa SMP/Sederajat',
-    thumbnailUrl: 'https://img.youtube.com/vi/VMSd7deMBn4/0.jpg',
-    duration: '5:12',
-  ),
-  VideoItem(
-    id: '2',
-    title: 'Video karya siswa dalam Pembelajaran B.Indonesia Kelas VIII',
-    thumbnailUrl: 'https://img.youtube.com/vi/6vXE871wp0w/0.jpg',
-    duration: '3:45',
-  ),
-  VideoItem(
-    id: '3',
-    title: 'GURU INSPIRATIF TERBAIK 2022 | VIDEO PEMBELAJARAN',
-    thumbnailUrl: 'https://img.youtube.com/vi/gZ4x73MBaPE/0.jpg',
-    duration: '7:30',
-  ),
-];
-
-class LearnVisionPage extends StatelessWidget {
+class LearnVisionPage extends StatefulWidget {
   const LearnVisionPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Title
-          const Text(
-            'Video Pembelajaran',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 4),
-          // Subtitle / description
-          const Text(
-            'Pelajari berbagai materi secara interaktif melalui video berikut.',
-            style: TextStyle(fontSize: 16, color: Colors.grey),
-          ),
-          const SizedBox(height: 12),
+  State<LearnVisionPage> createState() => _LearnVisionPageState();
+}
 
-          // Expanded list supaya memenuhi sisa ruang layar
-          Expanded(
-            child: ListView.builder(
-              itemCount: videos.length,
-              itemBuilder: (context, index) {
-                final video = videos[index];
-                return Card(
-                  margin: const EdgeInsets.symmetric(vertical: 8),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(12),
-                    onTap: () {
-                      // TODO: navigasi ke detail video
-                    },
-                    child: Row(
-                      children: [
-                        ClipRRect(
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                            bottomLeft: Radius.circular(12),
-                          ),
-                          child: Image.network(
-                            video.thumbnailUrl,
-                            width: 150,
-                            height: 90,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 8,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  video.title,
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                const SizedBox(height: 8),
-                                Text(
-                                  'Durasi: ${video.duration}',
-                                  style: TextStyle(color: Colors.grey[600]),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
+class _LearnVisionPageState extends State<LearnVisionPage> {
+  List<VideoGroup> _videoGroups = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _loadVideosFromJson();
+  }
+
+  Future<void> _loadVideosFromJson() async {
+    final String jsonString = await rootBundle.loadString(
+      'assets/video_data.json',
     );
+    final List<dynamic> jsonData = json.decode(jsonString);
+
+    setState(() {
+      _videoGroups = jsonData.map((item) => VideoGroup.fromJson(item)).toList();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return _videoGroups.isEmpty
+        ? const Center(child: CircularProgressIndicator())
+        : ListView(
+          padding: const EdgeInsets.all(12),
+          children: [
+            const Text(
+              'Video Pembelajaran',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 4),
+            const Text(
+              'Pelajari berbagai materi SMP secara interaktif.',
+              style: TextStyle(fontSize: 16, color: Colors.grey),
+            ),
+            const SizedBox(height: 16),
+            ..._buildGroupedTiles(),
+          ],
+        );
+  }
+
+  List<Widget> _buildGroupedTiles() {
+    final Map<String, Map<String, List<VideoItem>>> grouped = {};
+
+    for (var group in _videoGroups) {
+      grouped[group.kelas] ??= {};
+      grouped[group.kelas]![group.mapel] = group.videos;
+    }
+
+    return grouped.entries.map((kelasEntry) {
+      return ExpansionTile(
+        title: Text(
+          kelasEntry.key,
+          style: const TextStyle(fontWeight: FontWeight.bold),
+        ),
+        children:
+            kelasEntry.value.entries.map((mapelEntry) {
+              return ExpansionTile(
+                title: Text(mapelEntry.key),
+                children:
+                    mapelEntry.value.map((video) {
+                      return Card(
+                        margin: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 6,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: InkWell(
+                          onTap: () {
+                            // TODO: show video detail or play
+                          },
+                          child: Row(
+                            children: [
+                              ClipRRect(
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(12),
+                                  bottomLeft: Radius.circular(12),
+                                ),
+                                child: Image.network(
+                                  video.thumbnailUrl,
+                                  width: 120,
+                                  height: 80,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        video.title,
+                                        style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      const SizedBox(height: 6),
+                                      Text(
+                                        'Durasi: ${video.duration}',
+                                        style: TextStyle(
+                                          color: Colors.grey[600],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    }).toList(),
+              );
+            }).toList(),
+      );
+    }).toList();
   }
 }

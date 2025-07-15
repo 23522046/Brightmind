@@ -1,166 +1,187 @@
 import 'package:flutter/material.dart';
+import '../../../models/question.dart';
 
-class TalkSpacePage extends StatelessWidget {
-  final String userName;
-  const TalkSpacePage({super.key, required this.userName});
+class TalkspacePage extends StatefulWidget {
+  const TalkspacePage({super.key});
+
+  @override
+  State<TalkspacePage> createState() => _TalkspacePageState();
+}
+
+class _TalkspacePageState extends State<TalkspacePage> {
+  final List<Question> _questions = [...dummyQuestions];
+  final TextEditingController _questionCtrl = TextEditingController();
+
+  void _addQuestion() {
+    final text = _questionCtrl.text.trim();
+    if (text.isEmpty) return;
+
+    setState(() {
+      _questions.insert(
+        0,
+        Question(
+          id: DateTime.now().toIso8601String(),
+          question: text,
+          answer: null,
+          answeredBy: null,
+          askedAt: DateTime.now(),
+        ),
+      );
+      _questionCtrl.clear();
+    });
+  }
+
+  @override
+  void dispose() {
+    _questionCtrl.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    final primaryColor = const Color(0xFF0B60FF);
-
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Hi, $userName',
-              style: const TextStyle(
-                color: Colors.black87,
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              'Apa yang ingin Anda pelajari hari ini?',
-              style: TextStyle(color: Colors.grey[600], fontSize: 14),
-            ),
-          ],
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications_none, color: Colors.black54),
-            onPressed: () {
-              // TODO: notif action
-            },
-          ),
-        ],
+        title: const Text('TalkSpace - Tanya Jawab Bersama Relawan'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              // Progress Card
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: primaryColor,
-                  borderRadius: BorderRadius.circular(16),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    controller: _questionCtrl,
+                    minLines: 1,
+                    maxLines: 5,
+                    keyboardType: TextInputType.multiline,
+                    decoration: InputDecoration(
+                      hintText: 'Tulis pertanyaanmu di sini...',
+                      filled: true,
+                      fillColor: Colors.grey[100],
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none,
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 10,
+                      ),
+                    ),
+                  ),
                 ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'Progres Pembelajaran',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                const SizedBox(width: 8),
+                ElevatedButton(
+                  onPressed: _addQuestion,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF0B60FF),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  child: const Text(
+                    'Kirim',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Divider(),
+
+          // List pertanyaan
+          Expanded(
+            child: ListView.separated(
+              padding: const EdgeInsets.all(12),
+              itemCount: _questions.length,
+              separatorBuilder: (_, __) => const Divider(),
+              itemBuilder: (context, index) {
+                final q = _questions[index];
+                final bool isAnswered = q.answer != null;
+
+                return Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey.shade200),
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.white,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Status + tanggal
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color:
+                                  isAnswered
+                                      ? Colors.green[100]
+                                      : Colors.orange[100],
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Text(
+                              isAnswered ? 'Sudah Dijawab' : 'Menunggu Jawaban',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color:
+                                    isAnswered ? Colors.green : Colors.orange,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           ),
-                          SizedBox(height: 8),
                           Text(
-                            'Anda telah menyelesaikan 70% materi pembelajaran',
-                            style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 14,
+                            '${q.askedAt.day}/${q.askedAt.month}/${q.askedAt.year}',
+                            style: const TextStyle(
+                              fontSize: 12,
+                              color: Colors.grey,
                             ),
                           ),
-                          SizedBox(height: 12),
                         ],
                       ),
-                    ),
-                    SizedBox(
-                      width: 100,
-                      height: 100,
-                      child: CircularProgressIndicator(
-                        value: 0.7,
-                        strokeWidth: 10,
-                        backgroundColor: Colors.white24,
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          Colors.lightBlueAccent,
-                        ),
+                      const SizedBox(height: 8),
+
+                      // Pertanyaan
+                      Text(
+                        q.question,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
-                    ),
-                  ],
-                ),
-              ),
 
-              const SizedBox(height: 24),
-
-              // **GAMBAR SIMKAH di sini**
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: Image.asset(
-                  'assets/simkah_image.png',
-                  fit: BoxFit.cover,
-                  height: 150,
-                  width: double.infinity,
-                ),
-              ),
-
-              const SizedBox(height: 16),
-
-              // Info Card BrightMind
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: Colors.grey.shade300),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'BrightMind',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Aplikasi Belajar Gratis',
-                      style: TextStyle(color: Colors.grey[600], fontSize: 14),
-                    ),
-                    const SizedBox(height: 12),
-                    const Text(
-                      'BrightMind menyediakan platform pembelajaran digital interaktif yang membantu siswa belajar secara fleksibel dan efektif kapan saja dan di mana saja. Dengan berbagai fitur seperti video pembelajaran, sesi tanya jawab, dan try out, BrightMind mendukung peningkatan kualitas pendidikan bagi semua siswa.',
-                      style: TextStyle(fontSize: 14),
-                    ),
-                    const SizedBox(height: 16),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: primaryColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
+                      // Jawaban (jika ada)
+                      if (isAnswered) ...[
+                        const SizedBox(height: 8),
+                        Row(
+                          children: [
+                            const Icon(
+                              Icons.person,
+                              size: 16,
+                              color: Colors.blueGrey,
+                            ),
+                            const SizedBox(width: 4),
+                            Text(
+                              q.answeredBy ?? 'Relawan',
+                              style: const TextStyle(
+                                fontSize: 13,
+                                color: Colors.blueGrey,
+                              ),
+                            ),
+                          ],
                         ),
-                        onPressed: () {
-                          // TODO: aksi buka halaman utama pembelajaran atau fitur utama
-                        },
-                        child: const Text(
-                          'Mulai Belajar',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+                        const SizedBox(height: 4),
+                        Text(q.answer!),
+                      ],
+                    ],
+                  ),
+                );
+              },
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

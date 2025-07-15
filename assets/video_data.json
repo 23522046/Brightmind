@@ -1,0 +1,146 @@
+[
+  {
+    "kelas": "Kelas 7",
+    "mapel": "Matematika",
+    "videos": [
+      {
+        "id": "ZNBSs0C7rPY",
+        "title": "Pembelajaran Operasi Hitung Bilangan Bulat SMP Kelas 7",
+        "thumbnailUrl": "https://img.youtube.com/vi/ZNBSs0C7rPY/0.jpg",
+        "duration": "7:30"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 7",
+    "mapel": "IPA",
+    "videos": [
+      {
+        "id": "89tAY8eNz8A",
+        "title": "IPA Kelas 7: Struktur & Fungsi Org an Tumbuhan",
+        "thumbnailUrl": "https://img.youtube.com/vi/89tAY8eNz8A/0.jpg",
+        "duration": "8:30"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 7",
+    "mapel": "IPS",
+    "videos": [
+      {
+        "id": "fBLZq58Lgq4",
+        "title": "IPS Kelas 7: Interaksi Sosial dalam Masyarakat",
+        "thumbnailUrl": "https://img.youtube.com/vi/fBLZq58Lgq4/0.jpg",
+        "duration": "7:40"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 7",
+    "mapel": "Bahasa Indonesia",
+    "videos": [
+      {
+        "id": "6vXE871wp0w",
+        "title": "Video karya siswa dalam Pembelajaran B.Indonesia Kelas VIII",
+        "thumbnailUrl": "https://img.youtube.com/vi/6vXE871wp0w/0.jpg",
+        "duration": "3:45"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "Matematika",
+    "videos": [
+      {
+        "id": "j3-vxTMQlXM",
+        "title": "Kurikulum Merdeka Matematika Kelas 7 Bab 1 Bilangan Bulat (sebagai tanggung jawab contoh)",
+        "thumbnailUrl": "https://img.youtube.com/vi/j3-vxTMQlXM/0.jpg",
+        "duration": "9:00"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "IPA",
+    "videos": [
+      {
+        "id": "BN_kF5BYrT4",
+        "title": "SISTEM PERNAPASAN PADA MANUSIA : IPA KELAS 8 SMP",
+        "thumbnailUrl": "https://img.youtube.com/vi/BN_kF5BYrT4/0.jpg",
+        "duration": "8:10"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "IPS",
+    "videos": [
+      {
+        "id": "stu901",
+        "title": "IPS Kelas 8: Kondisi Geografis Indonesia",
+        "thumbnailUrl": "https://img.youtube.com/vi/stu901/0.jpg",
+        "duration": "7:05"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "Bahasa Indonesia",
+    "videos": [
+      {
+        "id": "gZ4x73MBaPE",
+        "title": "GURU INSPIRATIF TERBAIK 2022 | VIDEO PEMBELAJARAN",
+        "thumbnailUrl": "https://img.youtube.com/vi/gZ4x73MBaPE/0.jpg",
+        "duration": "7:30"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "Matematika",
+    "videos": [
+      {
+        "id": "YZ1234",
+        "title": "Matematika Kelas 9: Fungsi Kuadrat (Contoh)",
+        "thumbnailUrl": "https://img.youtube.com/vi/YZ1234/0.jpg",
+        "duration": "6:45"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "IPA",
+    "videos": [
+      {
+        "id": "abc567",
+        "title": "IPA Kelas 9: Sistem Reproduksi Manusia",
+        "thumbnailUrl": "https://img.youtube.com/vi/abc567/0.jpg",
+        "duration": "5:50"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "IPS",
+    "videos": [
+      {
+        "id": "def890",
+        "title": "IPS Kelas 9: Globalisasi dan Pengaruhnya",
+        "thumbnailUrl": "https://img.youtube.com/vi/def890/0.jpg",
+        "duration": "7:20"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "Bahasa Indonesia",
+    "videos": [
+      {
+        "id": "ghi345",
+        "title": "Bahasa Indonesia Kelas 9: Teks Eksplanasi",
+        "thumbnailUrl": "https://img.youtube.com/vi/ghi345/0.jpg",
+        "duration": "5:10"
+      }
+    ]
+  }
+]

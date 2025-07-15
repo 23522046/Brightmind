@@ -1,3 +1,4 @@
+import 'package:brightmind/screens/student/home_content.dart';
 import 'package:flutter/material.dart';
 
 import 'gotquestions/gotquestions_page.dart';
@@ -18,7 +19,7 @@ class StudentHomePage extends StatefulWidget {
 class _StudentHomePageState extends State<StudentHomePage> {
   final primaryColor = const Color(0xFF0B60FF);
 
-  int _selectedIndex = 0;
+  int _selectedIndex = -1;
 
   // List halaman untuk tab bottom nav (tidak termasuk FAB)
   late final List<Widget> _pages;
@@ -27,8 +28,8 @@ class _StudentHomePageState extends State<StudentHomePage> {
   void initState() {
     super.initState();
     _pages = [
-      TalkSpacePage(userName: 'Brian'),
       const LearnVisionPage(),
+      const TalkspacePage(),
       const ReadyToTestPage(),
       const ProfilePage(),
     ];
@@ -41,10 +42,9 @@ class _StudentHomePageState extends State<StudentHomePage> {
   }
 
   void _onFabPressed() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const GotQuestionsPage()),
-    );
+    setState(() {
+      _selectedIndex = -1;
+    });
   }
 
   Widget _buildNavItem(IconData icon, String label, int index) {
@@ -66,11 +66,14 @@ class _StudentHomePageState extends State<StudentHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: _pages[_selectedIndex],
+      body:
+          (_selectedIndex == -1)
+              ? HomeContent(userName: 'Brian')
+              : _pages[_selectedIndex],
       floatingActionButton: FloatingActionButton(
         backgroundColor: primaryColor,
         onPressed: _onFabPressed,
-        child: const Icon(Icons.question_answer, color: Colors.white),
+        child: const Icon(Icons.home, color: Colors.white),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
@@ -81,11 +84,12 @@ class _StudentHomePageState extends State<StudentHomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              _buildNavItem(Icons.chat, 'TalkSpace', 0),
-              _buildNavItem(Icons.video_collection, 'LearnVision', 1),
+              _buildNavItem(Icons.video_collection, 'LearnVision', 0),
+              _buildNavItem(Icons.chat, 'TalkSpace', 1),
+
               const SizedBox(width: 56), // space untuk FAB
               _buildNavItem(Icons.assignment_outlined, 'ReadyToTest!', 2),
-              _buildNavItem(Icons.person_outline, 'Profil', 3),
+              _buildNavItem(Icons.person_3_outlined, 'Profil', 3),
             ],
           ),
         ),
