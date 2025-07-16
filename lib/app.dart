@@ -1,4 +1,5 @@
 import 'package:brightmind/screens/student/student_home.dart';
+import 'package:brightmind/screens/volunteer/volunteer_home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -30,6 +31,7 @@ class App extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/register': (context) => RegisterPage(),
         '/student/home': (context) => StudentHomePage(userName: 'Brian'),
+        '/volunteer/home': (context) => VolunteerHomePage(userName: 'Matthew'),
         // add more named routes here
       },
     );

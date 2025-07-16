@@ -6,11 +6,11 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Data statis profil siswa
-    final String name = "Brian Elwin Hanner";
-    final String email = "brian.elwin@example.com";
+    final String name = "Matthew Sander";
+    final String email = "matthew.sander@example.com";
     final String phone = "081234567890";
     final String gender = "Laki-laki";
-    final String category = "Siswa";
+    final String category = "Relawan";
     final String? avatarUrl = "https://i.pravatar.cc/150?img=4";
 
     return Scaffold(

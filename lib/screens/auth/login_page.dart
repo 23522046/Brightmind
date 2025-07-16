@@ -43,6 +43,9 @@ class _LoginPageState extends State<LoginPage> {
 
   void _onGoogleLogin() {
     // TODO: implement Google login via AuthProvider
+    Navigator.pushReplacementNamed(context, '/volunteer/home');
+    // TODO: remove this line after testing
+    return;
   }
 
   void _onAppleLogin() {

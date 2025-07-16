@@ -87,12 +87,12 @@ class _RegisterPageState extends State<RegisterPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   CircleAvatar(
-                    radius: 40,
+                    radius: 80,
                     backgroundColor: Colors.white,
                     child: Image.asset(
                       'assets/logo.png',
-                      width: 100,
-                      height: 100,
+                      width: 120,
+                      height: 120,
                     ),
                   ),
                   const SizedBox(height: 24),

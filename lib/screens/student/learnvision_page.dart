@@ -35,7 +35,7 @@ class _LearnVisionPageState extends State<LearnVisionPage> {
     return _videoGroups.isEmpty
         ? const Center(child: CircularProgressIndicator())
         : ListView(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
           children: [
             const Text(
               'Video Pembelajaran',

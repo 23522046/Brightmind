@@ -1,0 +1,90 @@
+[
+  {
+    "kelas": "Kelas 7",
+    "mapel": "Matematika",
+    "tryouts": [
+      {
+        "title": "Try Out Matematika Dasar Kelas 7",
+        "description": "Latihan soal Matematika dasar untuk siswa kelas 7.",
+        "url": "https://forms.gle/matematika7"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 7",
+    "mapel": "IPA",
+    "tryouts": [
+      {
+        "title": "Try Out IPA Kelas 7",
+        "description": "Uji pemahaman konsep dasar IPA kelas 7.",
+        "url": "https://forms.gle/ipa7"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 7",
+    "mapel": "Bahasa Indonesia",
+    "tryouts": [
+      {
+        "title": "Try Out B. Indonesia Kelas 7",
+        "description": "Kuasai materi teks narasi dan puisi kelas 7.",
+        "url": "https://forms.gle/bindo7"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 7",
+    "mapel": "Bahasa Inggris",
+    "tryouts": [
+      {
+        "title": "Try Out B. Inggris Kelas 7",
+        "description": "Kuasai materi teks grammar & vocabulary kelas 7.",
+        "url": "https://forms.gle/bindo7"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "Matematika",
+    "tryouts": [
+      {
+        "title": "Try Out Matematika Kelas 8",
+        "description": "Latihan soal Aljabar dan Geometri kelas 8.",
+        "url": "https://forms.gle/matematika8"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "IPS",
+    "tryouts": [
+      {
+        "title": "Try Out IPS Kelas 8",
+        "description": "Soal terkait ekonomi dan sejarah Indonesia.",
+        "url": "https://forms.gle/ips8"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "IPA",
+    "tryouts": [
+      {
+        "title": "Try Out IPA Kelas 9",
+        "description": "Sistem organ manusia dan bioteknologi dasar.",
+        "url": "https://forms.gle/ipa9"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "Bahasa Indonesia",
+    "tryouts": [
+      {
+        "title": "Try Out Bahasa Indonesia Kelas 9",
+        "description": "Soal teks eksplanasi, ulasan, dan diskusi.",
+        "url": "https://forms.gle/bindo9"
+      }
+    ]
+  }
+]
