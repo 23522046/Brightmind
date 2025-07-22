@@ -48,16 +48,28 @@ class _RegisterPageState extends State<RegisterPage> {
 
     try {
       // Contoh, kamu bisa tambahkan parameter tambahan di method register nanti
-      await auth.register(_emailCtrl.text.trim(), _passwordCtrl.text.trim());
-
-      // TODO: Simpan data tambahan (nama lengkap, gender, phone, category) ke Firestore atau backend
+      await auth.register(
+        _emailCtrl.text.trim(),
+        _passwordCtrl.text.trim(),
+        name: _nameCtrl.text.trim(),
+        phone: _phoneCtrl.text.trim(),
+        gender: _gender!,
+        category: _category,
+      );
 
       if (auth.errorMessage != null) {
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text(auth.errorMessage!)));
       } else if (auth.isLoggedIn) {
-        Navigator.pushReplacementNamed(context, '/home');
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              'Register berhasil, silakan login menggunakan email dan password',
+            ),
+          ),
+        );
+        Navigator.pushReplacementNamed(context, '/login');
       }
     } catch (e) {
       ScaffoldMessenger.of(

@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import 'providers/auth_provider.dart';
 import 'screens/auth/login_page.dart';
 import 'screens/auth/register_page.dart';
-import 'screens/home_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -20,7 +19,7 @@ class App extends StatelessWidget {
       home: Consumer<AuthProvider>(
         builder: (context, auth, _) {
           if (auth.isLoggedIn) {
-            return HomePage();
+            return StudentHomePage(userName: 'Brian');
           } else {
             return LoginPage();
           }
@@ -28,7 +27,6 @@ class App extends StatelessWidget {
       ),
       routes: {
         '/login': (context) => LoginPage(),
-        '/home': (context) => HomePage(),
         '/register': (context) => RegisterPage(),
         '/student/home': (context) => StudentHomePage(userName: 'Brian'),
         '/volunteer/home': (context) => VolunteerHomePage(userName: 'Matthew'),
