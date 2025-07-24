@@ -42,6 +42,50 @@ class AuthProvider with ChangeNotifier {
     }
   }
 
+  // Get user data from Firestore
+  Future<Map<String, dynamic>?> getUserData() async {
+    if (user == null) return null;
+
+    try {
+      final userDoc = await _firestore.collection('users').doc(user!.uid).get();
+      if (userDoc.exists) {
+        return userDoc.data();
+      }
+    } catch (e) {
+      print('Error getting user data: $e');
+    }
+    return null;
+  }
+
+  // Update user profile data
+  Future<bool> updateUserProfile({
+    required String name,
+    required String phone,
+    required String gender,
+  }) async {
+    if (user == null) return false;
+
+    try {
+      await _firestore.collection('users').doc(user!.uid).update({
+        'name': name,
+        'phone': phone,
+        'gender': gender,
+        'updatedAt': FieldValue.serverTimestamp(),
+      });
+
+      // Update the display name in Firebase Auth if needed
+      if (user!.displayName != name) {
+        await user!.updateDisplayName(name);
+      }
+
+      notifyListeners();
+      return true;
+    } catch (e) {
+      print('Error updating user profile: $e');
+      return false;
+    }
+  }
+
   Future<void> register(
     String email,
     String password, {
