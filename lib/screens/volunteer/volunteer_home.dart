@@ -1,7 +1,8 @@
 import 'package:brightmind/screens/volunteer/home_content.dart';
-import 'package:brightmind/screens/volunteer/profile_page.dart';
 import 'package:brightmind/screens/volunteer/talkspace_page.dart';
 import 'package:flutter/material.dart';
+
+import '../common/profile_page.dart';
 
 class VolunteerHomePage extends StatefulWidget {
   final String userName;

@@ -1,9 +1,8 @@
 import 'package:brightmind/screens/student/home_content.dart';
 import 'package:flutter/material.dart';
 
-import 'gotquestions/gotquestions_page.dart';
 import 'learnvision_page.dart';
-import 'profile_page.dart';
+import '../common/profile_page.dart';
 import 'readytotest_page.dart';
 import 'talkspace_page.dart';
 
