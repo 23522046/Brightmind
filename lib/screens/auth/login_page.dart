@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/auth_provider.dart' as local_auth;
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -28,77 +26,24 @@ class _LoginPageState extends State<LoginPage> {
 
     if (!_formKey.currentState!.validate()) return;
 
-    try {
-      // Perform login
-      await auth.login(_emailCtrl.text.trim(), _passwordCtrl.text.trim());
+    // Perform login using AuthProvider only
+    await auth.login(
+      _emailCtrl.text.trim(),
+      _passwordCtrl.text.trim(),
+      rememberMe: _rememberMe,
+    );
 
-      if (auth.errorMessage != null) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text(auth.errorMessage!)));
-        return;
-      }
-
-      // Firebase Auth login validation
-      final userCredential = await FirebaseAuth.instance
-          .signInWithEmailAndPassword(
-            email: _emailCtrl.text.trim(),
-            password: _passwordCtrl.text.trim(),
-          );
-
-      final user = userCredential.user;
-      if (user != null) {
-        // Fetch user category from Firestore
-        final userDoc =
-            await FirebaseFirestore.instance
-                .collection('users')
-                .doc(user.uid)
-                .get();
-
-        if (userDoc.exists) {
-          final category = userDoc['category'];
-
-          // Navigate based on category
-          if (mounted) {
-            if (category == 'Siswa') {
-              Navigator.pushReplacementNamed(context, '/student/home');
-            } else if (category == 'Relawan') {
-              Navigator.pushReplacementNamed(context, '/volunteer/home');
-            }
-          }
-        } else {
-          // Handle the case where the user document does not exist
-          if (mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('User tidak ditemukan')),
-            );
-          }
-        }
-      }
-    } on FirebaseAuthException catch (e) {
-      // Handle FirebaseAuthException
-      String errorMessage = '';
-
-      if (e.code == 'user-not-found') {
-        errorMessage = 'Email yang anda masukkan tidak terdaftar.';
-      } else if (e.code == 'wrong-password') {
-        errorMessage = 'Password yang anda masukkan salah.';
-      } else {
-        errorMessage = 'Terjadi kesalahan: ${e.message}';
-      }
-
-      // Show custom error message
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(errorMessage)));
-    } catch (e) {
-      // Catch other errors
+    if (auth.errorMessage != null) {
       if (mounted) {
         ScaffoldMessenger.of(
           context,
-        ).showSnackBar(SnackBar(content: Text('Login gagal: $e')));
+        ).showSnackBar(SnackBar(content: Text(auth.errorMessage!)));
       }
+      return;
     }
+
+    // Navigation will be handled automatically by the App widget
+    // when AuthProvider notifies listeners of the login state change
   }
 
   // Google login (to be implemented)

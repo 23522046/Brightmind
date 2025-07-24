@@ -9,8 +9,38 @@ class AuthProvider with ChangeNotifier {
   bool isLoading = false;
   String? errorMessage;
   User? user;
+  String? userCategory;
+  bool rememberMe = false;
 
   bool get isLoggedIn => user != null;
+
+  AuthProvider() {
+    // Listen to auth state changes
+    _auth.authStateChanges().listen((User? user) {
+      this.user = user;
+      if (user != null) {
+        _loadUserCategory();
+      } else {
+        userCategory = null;
+      }
+      notifyListeners();
+    });
+  }
+
+  Future<void> _loadUserCategory() async {
+    if (user != null) {
+      try {
+        final userDoc =
+            await _firestore.collection('users').doc(user!.uid).get();
+        if (userDoc.exists) {
+          userCategory = userDoc['category'];
+          notifyListeners();
+        }
+      } catch (e) {
+        print('Error loading user category: $e');
+      }
+    }
+  }
 
   Future<void> register(
     String email,
@@ -82,19 +112,24 @@ class AuthProvider with ChangeNotifier {
   Future<void> logout() async {
     await _auth.signOut();
     user = null;
+    userCategory = null;
     notifyListeners();
   }
 
-  // Login, logout, and other methods...
-  Future<void> login(String email, String password) async {
+  // Login method - simplified since authStateChanges will handle user updates
+  Future<void> login(
+    String email,
+    String password, {
+    bool rememberMe = false,
+  }) async {
     isLoading = true;
+    errorMessage = null;
+    this.rememberMe = rememberMe;
     notifyListeners();
+
     try {
-      final userCredential = await _auth.signInWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-      user = userCredential.user;
+      await _auth.signInWithEmailAndPassword(email: email, password: password);
+      // No need to manually set user - authStateChanges listener will handle it
       errorMessage = null;
     } on FirebaseAuthException catch (e) {
       errorMessage = e.message;
