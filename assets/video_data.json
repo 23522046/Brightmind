@@ -1,13 +1,43 @@
 [
   {
     "kelas": "Kelas 7",
-    "mapel": "Matematika",
+    "mapel": "Bahasa Indonesia",
     "videos": [
       {
-        "id": "ZNBSs0C7rPY",
-        "title": "Pembelajaran Operasi Hitung Bilangan Bulat SMP Kelas 7",
-        "thumbnailUrl": "https://img.youtube.com/vi/ZNBSs0C7rPY/0.jpg",
-        "duration": "7:30"
+        "id": "llt-4-8ogXg",
+        "title": "Bahasa Indonesia, kelas 7 bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/llt-4-8ogXg/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "ZA9TQXRR4Nc",
+        "title": "Bahasa Indonesia, kelas 7 bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/ZA9TQXRR4Nc/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "O7KfPQFf2Bw",
+        "title": "Bahasa Indonesia, kelas 7 bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/O7KfPQFf2Bw/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "TgKD0yfDX68",
+        "title": "Bahasa Indonesia, kelas 7 bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/TgKD0yfDX68/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "_Pk3bbYCZ0U",
+        "title": "Bahasa Indonesia, kelas 7 bab 5",
+        "thumbnailUrl": "https://img.youtube.com/vi/_Pk3bbYCZ0U/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "d4jQ8wpiDyk",
+        "title": "Bahasa Indonesia, kelas 7 bab 6",
+        "thumbnailUrl": "https://img.youtube.com/vi/d4jQ8wpiDyk/0.jpg",
+        "duration": "00:00"
       }
     ]
   },
@@ -16,10 +46,46 @@
     "mapel": "IPA",
     "videos": [
       {
-        "id": "89tAY8eNz8A",
-        "title": "IPA Kelas 7: Struktur & Fungsi Org an Tumbuhan",
-        "thumbnailUrl": "https://img.youtube.com/vi/89tAY8eNz8A/0.jpg",
-        "duration": "8:30"
+        "id": "ooFgcMwgSJY",
+        "title": "IPA kelas 7 bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/ooFgcMwgSJY/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "SrF81FKhX-E",
+        "title": "IPA kelas 7 bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/SrF81FKhX-E/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "JHcNJ94kFPg",
+        "title": "IPA kelas 7 bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/JHcNJ94kFPg/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "QDfEyfsZIBw",
+        "title": "IPA kelas 7 bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/QDfEyfsZIBw/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "rO4r7PMDRQY",
+        "title": "IPA kelas 7 bab 5",
+        "thumbnailUrl": "https://img.youtube.com/vi/rO4r7PMDRQY/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "l-Nwv2Jytgc",
+        "title": "IPA kelas 7 bab 6",
+        "thumbnailUrl": "https://img.youtube.com/vi/l-Nwv2Jytgc/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "TJTQq3mtbKA",
+        "title": "IPA kelas 7 bab 7",
+        "thumbnailUrl": "https://img.youtube.com/vi/TJTQq3mtbKA/0.jpg",
+        "duration": "00:00"
       }
     ]
   },
@@ -28,58 +94,82 @@
     "mapel": "IPS",
     "videos": [
       {
-        "id": "fBLZq58Lgq4",
-        "title": "IPS Kelas 7: Interaksi Sosial dalam Masyarakat",
-        "thumbnailUrl": "https://img.youtube.com/vi/fBLZq58Lgq4/0.jpg",
-        "duration": "7:40"
+        "id": "NWHF4QW0VSo",
+        "title": "IPS, kelas 7, tema 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/NWHF4QW0VSo/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "HA5ibNBXwDg",
+        "title": "IPS kelas 7, tema 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/HA5ibNBXwDg/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "SvkIStJUpsw",
+        "title": "IPS kelas 7, tema 3, part A",
+        "thumbnailUrl": "https://img.youtube.com/vi/SvkIStJUpsw/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "S1xHhqlhaL0",
+        "title": "IPS kelas 7, tema 3, part B",
+        "thumbnailUrl": "https://img.youtube.com/vi/S1xHhqlhaL0/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "6tDvbvBrvtk",
+        "title": "IPS kelas 7, tema 3, part C",
+        "thumbnailUrl": "https://img.youtube.com/vi/6tDvbvBrvtk/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "nA8Da92YSY8",
+        "title": "IPS kelas 7, tema 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/nA8Da92YSY8/0.jpg",
+        "duration": "00:00"
       }
     ]
   },
   {
     "kelas": "Kelas 7",
-    "mapel": "Bahasa Indonesia",
-    "videos": [
-      {
-        "id": "6vXE871wp0w",
-        "title": "Video karya siswa dalam Pembelajaran B.Indonesia Kelas VIII",
-        "thumbnailUrl": "https://img.youtube.com/vi/6vXE871wp0w/0.jpg",
-        "duration": "3:45"
-      }
-    ]
-  },
-  {
-    "kelas": "Kelas 8",
     "mapel": "Matematika",
     "videos": [
       {
         "id": "j3-vxTMQlXM",
-        "title": "Kurikulum Merdeka Matematika Kelas 7 Bab 1 Bilangan Bulat (sebagai tanggung jawab contoh)",
+        "title": "matematika kelas 7, bab 1",
         "thumbnailUrl": "https://img.youtube.com/vi/j3-vxTMQlXM/0.jpg",
-        "duration": "9:00"
-      }
-    ]
-  },
-  {
-    "kelas": "Kelas 8",
-    "mapel": "IPA",
-    "videos": [
+        "duration": "00:00"
+      },
       {
-        "id": "BN_kF5BYrT4",
-        "title": "SISTEM PERNAPASAN PADA MANUSIA : IPA KELAS 8 SMP",
-        "thumbnailUrl": "https://img.youtube.com/vi/BN_kF5BYrT4/0.jpg",
-        "duration": "8:10"
-      }
-    ]
-  },
-  {
-    "kelas": "Kelas 8",
-    "mapel": "IPS",
-    "videos": [
+        "id": "NE2LrOhYgXs",
+        "title": "matematika kelas 7, bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/NE2LrOhYgXs/0.jpg",
+        "duration": "00:00"
+      },
       {
-        "id": "stu901",
-        "title": "IPS Kelas 8: Kondisi Geografis Indonesia",
-        "thumbnailUrl": "https://img.youtube.com/vi/stu901/0.jpg",
-        "duration": "7:05"
+        "id": "d_pu3O6xKig",
+        "title": "matematika kelas 7, bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/d_pu3O6xKig/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "KTbI7v7SfQA",
+        "title": "matematika kelas 7, bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/KTbI7v7SfQA/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "uHzUKjXl8xM",
+        "title": "matematika kelas 7, bab 5",
+        "thumbnailUrl": "https://img.youtube.com/vi/uHzUKjXl8xM/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "Gl3RxwlnThw",
+        "title": "matematika kelas 7, bab 6",
+        "thumbnailUrl": "https://img.youtube.com/vi/Gl3RxwlnThw/0.jpg",
+        "duration": "00:00"
       }
     ]
   },
@@ -88,10 +178,376 @@
     "mapel": "Bahasa Indonesia",
     "videos": [
       {
-        "id": "gZ4x73MBaPE",
-        "title": "GURU INSPIRATIF TERBAIK 2022 | VIDEO PEMBELAJARAN",
-        "thumbnailUrl": "https://img.youtube.com/vi/gZ4x73MBaPE/0.jpg",
-        "duration": "7:30"
+        "id": "mwJeFysblag",
+        "title": "Bahasa Indonesia, kelas 8 bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/mwJeFysblag/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "jY8maDCJWm0",
+        "title": "Bahasa Indonesia, kelas 8 bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/jY8maDCJWm0/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "rVZUsxzdjsM",
+        "title": "Bahasa Indonesia, kelas 8 bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/rVZUsxzdjsM/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "8lbpi02fJwE",
+        "title": "Bahasa Indonesia, kelas 8 bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/8lbpi02fJwE/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "cxORcp3VNcs",
+        "title": "Bahasa Indonesia, kelas 8 bab 5",
+        "thumbnailUrl": "https://img.youtube.com/vi/cxORcp3VNcs/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "mWFiW1mzjqQ",
+        "title": "Bahasa Indonesia, kelas 8 bab 6",
+        "thumbnailUrl": "https://img.youtube.com/vi/mWFiW1mzjqQ/0.jpg",
+        "duration": "00:00"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "IPA",
+    "videos": [
+      {
+        "id": "G74zf7ZBbb0",
+        "title": "IPA kelas 8 bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/G74zf7ZBbb0/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "K10-IhosGZM",
+        "title": "IPA kelas 8 bab 2 part 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/K10-IhosGZM/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "cIXnK1n9qms",
+        "title": "IPA kelas 8 bab 2 part 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/cIXnK1n9qms/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "L-qX72dpw8Q",
+        "title": "IPA kelas 8 bab 2 part 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/L-qX72dpw8Q/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "12i-BpPULq4",
+        "title": "IPA kelas 8 bab 2 part 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/12i-BpPULq4/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "92f3PBYRE10",
+        "title": "IPA kelas 8 bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/92f3PBYRE10/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "-4xhr6CwG28",
+        "title": "IPA kelas 8 bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/-4xhr6CwG28/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "Ypl_JnA2Oqc",
+        "title": "IPA kelas 8 bab 5",
+        "thumbnailUrl": "https://img.youtube.com/vi/Ypl_JnA2Oqc/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "fzNzYvtQE18",
+        "title": "IPA kelas 8 bab 6",
+        "thumbnailUrl": "https://img.youtube.com/vi/fzNzYvtQE18/0.jpg",
+        "duration": "00:00"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "IPS",
+    "videos": [
+      {
+        "id": "n5MFt6SeB1k",
+        "title": "IPS, kelas 8, tema 1 sub bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/n5MFt6SeB1k/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "A_I6F8mkCUM",
+        "title": "IPS kelas 8, tema 1 sub bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/A_I6F8mkCUM/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "UNbPWOajE_c",
+        "title": "IPS kelas 8, tema 1 sub bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/UNbPWOajE_c/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "aH3a7qlxaus",
+        "title": "IPS kelas 8, tema 1 sub bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/aH3a7qlxaus/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "LQleg3zwFTA",
+        "title": "IPS kelas 8, tema 1 sub bab 5",
+        "thumbnailUrl": "https://img.youtube.com/vi/LQleg3zwFTA/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "t7tCrxM0SIc",
+        "title": "IPS kelas 8, tema 2 sub bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/t7tCrxM0SIc/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "KKIvBaz2W0w",
+        "title": "IPS kelas 8, tema 2 sub bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/KKIvBaz2W0w/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "UjjJBcEJ8BU",
+        "title": "IPS kelas 8, tema 2 sub bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/UjjJBcEJ8BU/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "ag-GCOzemCk",
+        "title": "IPS kelas 8, tema 3 sub bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/ag-GCOzemCk/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "9irh_j7OVc4",
+        "title": "IPS kelas 8, tema 3 sub bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/9irh_j7OVc4/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "xK0PbIroCao",
+        "title": "IPS kelas 8, tema 3 sub bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/xK0PbIroCao/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "eyB6tSf7GZE",
+        "title": "IPS kelas 8, tema 3 sub bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/eyB6tSf7GZE/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "Kvxhe5Kw_RY",
+        "title": "IPS kelas 8, tema 4 sub bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/Kvxhe5Kw_RY/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "OZSke3o5Z3s",
+        "title": "IPS kelas 8, tema 4 sub bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/OZSke3o5Z3s/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "Oj1HCld5tvQ",
+        "title": "IPS kelas 8, tema 4 sub bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/Oj1HCld5tvQ/0.jpg",
+        "duration": "00:00"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "Matematika",
+    "videos": [
+      {
+        "id": "94pc0dh92dA",
+        "title": "matematika kelas 8, bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/94pc0dh92dA/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "JxRergfgyTk",
+        "title": "matematika kelas 8,  bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/JxRergfgyTk/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "Bnn80nOnWU0",
+        "title": "matematika kelas 8, bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/Bnn80nOnWU0/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "5zD5ppiCjHE",
+        "title": "matematika kelas 8, bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/5zD5ppiCjHE/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "aLdYlnXe-zU",
+        "title": "matematika kelas 8, bab 5",
+        "thumbnailUrl": "https://img.youtube.com/vi/aLdYlnXe-zU/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "-8S8SYWShfY",
+        "title": "matematika kelas 8, bab 6",
+        "thumbnailUrl": "https://img.youtube.com/vi/-8S8SYWShfY/0.jpg",
+        "duration": "00:00"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "Bahasa Indonesia",
+    "videos": [
+      {
+        "id": "fJOI98Z_R58",
+        "title": "Bahasa Indonesia, kelas 9 bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/fJOI98Z_R58/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "hl7093MQ-Js",
+        "title": "Bahasa Indonesia, kelas 9 bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/hl7093MQ-Js/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "hC9q4p5No4w",
+        "title": "Bahasa Indonesia, kelas 9 bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/hC9q4p5No4w/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "Ekgn9UWGJ8A",
+        "title": "Bahasa Indonesia, kelas 9 bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/Ekgn9UWGJ8A/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "uY1tB1Dy28U",
+        "title": "Bahasa Indonesia, kelas 9 bab 5",
+        "thumbnailUrl": "https://img.youtube.com/vi/uY1tB1Dy28U/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "QplLtxAYplc",
+        "title": "Bahasa Indonesia, kelas 9 bab 6",
+        "thumbnailUrl": "https://img.youtube.com/vi/QplLtxAYplc/0.jpg",
+        "duration": "00:00"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "IPA",
+    "videos": [
+      {
+        "id": "xqNoQjBFl0Y",
+        "title": "IPA kelas 9 bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/xqNoQjBFl0Y/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "aZLxJUu2ysE",
+        "title": "IPA kelas 9 bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/aZLxJUu2ysE/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "cFHe2FyjLBE",
+        "title": "IPA kelas 9 bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/cFHe2FyjLBE/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "jLGD8d_Sy3s",
+        "title": "IPA kelas 9 bab 4 part 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/jLGD8d_Sy3s/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "4KOUoJeraqg",
+        "title": "IPA kelas 9 bab 4 part 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/4KOUoJeraqg/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "-Sy-qX71OhE",
+        "title": "IPA kelas 9 bab 4 part 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/-Sy-qX71OhE/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "WNdffXxNq80",
+        "title": "IPA kelas 9 bab 5",
+        "thumbnailUrl": "https://img.youtube.com/vi/WNdffXxNq80/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "0Bn_WMjubHs",
+        "title": "IPA kelas 9 bab 6",
+        "thumbnailUrl": "https://img.youtube.com/vi/0Bn_WMjubHs/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "hTfF4RzjGBE",
+        "title": "IPA kelas 9 bab 7",
+        "thumbnailUrl": "https://img.youtube.com/vi/hTfF4RzjGBE/0.jpg",
+        "duration": "00:00"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "IPS",
+    "videos": [
+      {
+        "id": "jwd5-7sm7d0",
+        "title": "IPS kelas 9, tema 1 sub bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/jwd5-7sm7d0/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "fDCk4Mx-l5o",
+        "title": "IPS kelas 9, tema 1 sub bab 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/fDCk4Mx-l5o/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "uMGhX-rv27I",
+        "title": "IPS kelas 9, tema 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/uMGhX-rv27I/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "5Y85AJX6hJM",
+        "title": "IPS kelas 9, tema 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/5Y85AJX6hJM/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "uhbTfdWXlqM",
+        "title": "IPS kelas 9, tema 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/uhbTfdWXlqM/0.jpg",
+        "duration": "00:00"
       }
     ]
   },
@@ -100,46 +556,34 @@
     "mapel": "Matematika",
     "videos": [
       {
-        "id": "YZ1234",
-        "title": "Matematika Kelas 9: Fungsi Kuadrat (Contoh)",
-        "thumbnailUrl": "https://img.youtube.com/vi/YZ1234/0.jpg",
-        "duration": "6:45"
-      }
-    ]
-  },
-  {
-    "kelas": "Kelas 9",
-    "mapel": "IPA",
-    "videos": [
+        "id": "JW_zoOEPYl4",
+        "title": "matematika kelas 9, bab 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/JW_zoOEPYl4/0.jpg",
+        "duration": "00:00"
+      },
       {
-        "id": "abc567",
-        "title": "IPA Kelas 9: Sistem Reproduksi Manusia",
-        "thumbnailUrl": "https://img.youtube.com/vi/abc567/0.jpg",
-        "duration": "5:50"
-      }
-    ]
-  },
-  {
-    "kelas": "Kelas 9",
-    "mapel": "IPS",
-    "videos": [
+        "id": "fxR74VrdviY",
+        "title": "matematika kelas 9, bab 2 part 1",
+        "thumbnailUrl": "https://img.youtube.com/vi/fxR74VrdviY/0.jpg",
+        "duration": "00:00"
+      },
       {
-        "id": "def890",
-        "title": "IPS Kelas 9: Globalisasi dan Pengaruhnya",
-        "thumbnailUrl": "https://img.youtube.com/vi/def890/0.jpg",
-        "duration": "7:20"
-      }
-    ]
-  },
-  {
-    "kelas": "Kelas 9",
-    "mapel": "Bahasa Indonesia",
-    "videos": [
+        "id": "K5gorLgkCjY",
+        "title": "matematika kelas 9, bab 2 part 2",
+        "thumbnailUrl": "https://img.youtube.com/vi/K5gorLgkCjY/0.jpg",
+        "duration": "00:00"
+      },
       {
-        "id": "ghi345",
-        "title": "Bahasa Indonesia Kelas 9: Teks Eksplanasi",
-        "thumbnailUrl": "https://img.youtube.com/vi/ghi345/0.jpg",
-        "duration": "5:10"
+        "id": "ZDwqCBHBVsY",
+        "title": "matematika kelas 9, bab 3",
+        "thumbnailUrl": "https://img.youtube.com/vi/ZDwqCBHBVsY/0.jpg",
+        "duration": "00:00"
+      },
+      {
+        "id": "Nn3jqpVvKhY",
+        "title": "matematika kelas 9, bab 4",
+        "thumbnailUrl": "https://img.youtube.com/vi/Nn3jqpVvKhY/0.jpg",
+        "duration": "00:00"
       }
     ]
   }
