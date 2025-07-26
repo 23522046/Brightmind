@@ -3,6 +3,8 @@ import 'package:brightmind/models/video_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../widgets/videoplayer_page.dart';
+
 class LearnVisionPage extends StatefulWidget {
   const LearnVisionPage({super.key});
 
@@ -82,8 +84,18 @@ class _LearnVisionPageState extends State<LearnVisionPage> {
                         ),
                         child: InkWell(
                           onTap: () {
-                            // TODO: show video detail or play
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder:
+                                    (_) => VideoPlayerPage(
+                                      videoId: video.id,
+                                      title: video.title,
+                                    ),
+                              ),
+                            );
                           },
+
                           child: Row(
                             children: [
                               ClipRRect(
