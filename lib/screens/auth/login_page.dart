@@ -297,43 +297,43 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   const SizedBox(height: 30),
-                  const Text(
-                    'Atau Lanjutkan Dengan',
-                    style: TextStyle(color: Color(0xFF5B5F7B)),
-                  ),
-                  const SizedBox(height: 20),
-                  // Google Login and Apple Login
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      GestureDetector(
-                        onTap: _onGoogleLogin,
-                        child: CircleAvatar(
-                          radius: 24,
-                          backgroundColor: Colors.white,
-                          child: Image.asset(
-                            'assets/google_logo.png',
-                            width: 24,
-                            height: 24,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 40),
-                      GestureDetector(
-                        onTap: _onAppleLogin,
-                        child: CircleAvatar(
-                          radius: 24,
-                          backgroundColor: Colors.white,
-                          child: Image.asset(
-                            'assets/apple_logo.png',
-                            width: 24,
-                            height: 24,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 30),
+                  // const Text(
+                  //   'Atau Lanjutkan Dengan',
+                  //   style: TextStyle(color: Color(0xFF5B5F7B)),
+                  // ),
+                  // const SizedBox(height: 20),
+                  // // Google Login and Apple Login
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     GestureDetector(
+                  //       onTap: _onGoogleLogin,
+                  //       child: CircleAvatar(
+                  //         radius: 24,
+                  //         backgroundColor: Colors.white,
+                  //         child: Image.asset(
+                  //           'assets/google_logo.png',
+                  //           width: 24,
+                  //           height: 24,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //     const SizedBox(width: 40),
+                  //     GestureDetector(
+                  //       onTap: _onAppleLogin,
+                  //       child: CircleAvatar(
+                  //         radius: 24,
+                  //         backgroundColor: Colors.white,
+                  //         child: Image.asset(
+                  //           'assets/apple_logo.png',
+                  //           width: 24,
+                  //           height: 24,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
