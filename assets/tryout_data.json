@@ -1,45 +1,45 @@
 [
   {
     "kelas": "Kelas 7",
-    "mapel": "Matematika",
+    "mapel": "Matematika ✅",
     "tryouts": [
       {
         "title": "Try Out Matematika Dasar Kelas 7",
         "description": "Latihan soal Matematika dasar untuk siswa kelas 7.",
-        "url": "https://forms.gle/matematika7"
+        "url": "https://forms.gle/wLtbcBUtK85N7ENc7"
       }
     ]
   },
   {
     "kelas": "Kelas 7",
-    "mapel": "IPA",
+    "mapel": "IPA ✅",
     "tryouts": [
       {
         "title": "Try Out IPA Kelas 7",
         "description": "Uji pemahaman konsep dasar IPA kelas 7.",
-        "url": "https://forms.gle/ipa7"
+        "url": "https://forms.gle/W4Sjc32TNFUdgxx3A"
       }
     ]
   },
   {
     "kelas": "Kelas 7",
-    "mapel": "Bahasa Indonesia",
+    "mapel": "Bahasa Indonesia ✅",
     "tryouts": [
       {
         "title": "Try Out B. Indonesia Kelas 7",
-        "description": "Kuasai materi teks narasi dan puisi kelas 7.",
-        "url": "https://forms.gle/bindo7"
+        "description": "Kuasai materi bahasa indonesia kelas 7.",
+        "url": "https://forms.gle/P2ceTCgQMzphXz1f9"
       }
     ]
   },
   {
     "kelas": "Kelas 7",
-    "mapel": "Bahasa Inggris",
+    "mapel": "IPS ✅",
     "tryouts": [
       {
-        "title": "Try Out B. Inggris Kelas 7",
-        "description": "Kuasai materi teks grammar & vocabulary kelas 7.",
-        "url": "https://forms.gle/bindo7"
+        "title": "Try Out IPS Kelas 7",
+        "description": "Kuasai materi ilmu pengetahuan sosial kelas 7.",
+        "url": "https://forms.gle/Gdd2r5iNFNe9EkgQ9"
       }
     ]
   },
