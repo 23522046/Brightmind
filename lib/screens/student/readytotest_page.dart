@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../models/tryout_item.dart';
@@ -31,13 +32,18 @@ class _ReadyToTestPageState extends State<ReadyToTestPage> {
     });
   }
 
-  void _launchTryOut(String url) async {
-    final Uri uri = Uri.parse(url);
-    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Gagal membuka tautan tryout')),
-      );
-    }
+  void _launchTryOut(String url) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder:
+            (context) => Scaffold(
+              appBar: AppBar(title: const Text('Try Out')),
+              body: InAppWebView(
+                initialUrlRequest: URLRequest(url: WebUri.uri(Uri.parse(url))),
+              ),
+            ),
+      ),
+    );
   }
 
   @override

@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 import '../common/profile_page.dart';
 
 class VolunteerHomePage extends StatefulWidget {
-  final String userName;
-
-  const VolunteerHomePage({super.key, required this.userName});
+  const VolunteerHomePage({super.key});
 
   @override
   State<VolunteerHomePage> createState() => _VolunteerHomePageState();
@@ -58,10 +56,7 @@ class _VolunteerHomePageState extends State<VolunteerHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body:
-          (_selectedIndex == -1)
-              ? HomeContent(userName: 'Matthew')
-              : _pages[_selectedIndex],
+      body: (_selectedIndex == -1) ? HomeContent() : _pages[_selectedIndex],
       floatingActionButton: FloatingActionButton(
         backgroundColor: primaryColor,
         onPressed: _onFabPressed,

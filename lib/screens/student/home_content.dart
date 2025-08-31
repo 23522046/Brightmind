@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeContent extends StatelessWidget {
-  final String userName;
-  const HomeContent({super.key, required this.userName});
+  const HomeContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class HomeContent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Hi, $userName',
+              'Halo, Siswa!',
               style: const TextStyle(
                 color: Colors.black87,
                 fontWeight: FontWeight.bold,

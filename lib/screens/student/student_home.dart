@@ -7,9 +7,7 @@ import 'readytotest_page.dart';
 import 'talkspace_page.dart';
 
 class StudentHomePage extends StatefulWidget {
-  final String userName;
-
-  const StudentHomePage({super.key, required this.userName});
+  const StudentHomePage({super.key});
 
   @override
   State<StudentHomePage> createState() => _StudentHomePageState();
@@ -65,10 +63,7 @@ class _StudentHomePageState extends State<StudentHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body:
-          (_selectedIndex == -1)
-              ? HomeContent(userName: 'Brian')
-              : _pages[_selectedIndex],
+      body: (_selectedIndex == -1) ? HomeContent() : _pages[_selectedIndex],
       floatingActionButton: FloatingActionButton(
         backgroundColor: primaryColor,
         onPressed: _onFabPressed,

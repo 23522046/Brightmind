@@ -37,9 +37,9 @@ class App extends StatelessWidget {
 
             // Navigate based on the user's category
             if (category == 'Siswa') {
-              return StudentHomePage(userName: user.displayName ?? 'Siswa');
+              return StudentHomePage();
             } else if (category == 'Relawan') {
-              return VolunteerHomePage(userName: user.displayName ?? 'Relawan');
+              return VolunteerHomePage();
             } else {
               return const Center(child: Text('Unknown category.'));
             }
@@ -52,9 +52,8 @@ class App extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
-        '/student/home': (context) => const StudentHomePage(userName: 'Brian'),
-        '/volunteer/home':
-            (context) => const VolunteerHomePage(userName: 'Matthew'),
+        '/student/home': (context) => const StudentHomePage(),
+        '/volunteer/home': (context) => const VolunteerHomePage(),
       },
     );
   }
