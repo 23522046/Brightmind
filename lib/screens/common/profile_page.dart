@@ -141,7 +141,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
         child: Column(
           children: [
             // Profile Avatar

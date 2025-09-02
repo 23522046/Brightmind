@@ -1,7 +1,7 @@
 [
   {
     "kelas": "Kelas 7",
-    "mapel": "Matematika ✅",
+    "mapel": "Matematika",
     "tryouts": [
       {
         "title": "Try Out Matematika Dasar Kelas 7",
@@ -12,7 +12,7 @@
   },
   {
     "kelas": "Kelas 7",
-    "mapel": "IPA ✅",
+    "mapel": "IPA",
     "tryouts": [
       {
         "title": "Try Out IPA Kelas 7",
@@ -23,7 +23,7 @@
   },
   {
     "kelas": "Kelas 7",
-    "mapel": "Bahasa Indonesia ✅",
+    "mapel": "Bahasa Indonesia",
     "tryouts": [
       {
         "title": "Try Out B. Indonesia Kelas 7",
@@ -34,7 +34,7 @@
   },
   {
     "kelas": "Kelas 7",
-    "mapel": "IPS ✅",
+    "mapel": "IPS",
     "tryouts": [
       {
         "title": "Try Out IPS Kelas 7",
@@ -49,8 +49,19 @@
     "tryouts": [
       {
         "title": "Try Out Matematika Kelas 8",
-        "description": "Latihan soal Aljabar dan Geometri kelas 8.",
-        "url": "https://forms.gle/matematika8"
+        "description": "Latihan soal Matematika kelas 8.",
+        "url": "https://forms.gle/bpfqh5rhYgryrTLv8"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "IPA",
+    "tryouts": [
+      {
+        "title": "Try Out IPA Kelas 8",
+        "description": "Soal Ilmu Pengetahuan Alam kelas 8.",
+        "url": "https://forms.gle/JPbokRz3rK8oEAki8"
       }
     ]
   },
@@ -61,7 +72,18 @@
       {
         "title": "Try Out IPS Kelas 8",
         "description": "Soal terkait ekonomi dan sejarah Indonesia.",
-        "url": "https://forms.gle/ips8"
+        "url": "https://forms.gle/aRxDz6WhYi3UxQG17"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 8",
+    "mapel": "Bahasa Indonesia",
+    "tryouts": [
+      {
+        "title": "Try Out Bahasa Indonesia Kelas 8",
+        "description": "Soal terkait ekonomi dan sejarah Indonesia.",
+        "url": "https://forms.gle/Weia4kigkdY44dNC7"
       }
     ]
   },
@@ -72,7 +94,7 @@
       {
         "title": "Try Out IPA Kelas 9",
         "description": "Sistem organ manusia dan bioteknologi dasar.",
-        "url": "https://forms.gle/ipa9"
+        "url": "https://forms.gle/D8r2ai4fLbZaVp9c7"
       }
     ]
   },
@@ -83,7 +105,29 @@
       {
         "title": "Try Out Bahasa Indonesia Kelas 9",
         "description": "Soal teks eksplanasi, ulasan, dan diskusi.",
-        "url": "https://forms.gle/bindo9"
+        "url": "https://forms.gle/htdfWCP3YQm38Tts5"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "Matematika",
+    "tryouts": [
+      {
+        "title": "Try Out Matematika Kelas 9",
+        "description": "Latihan soal Matematika dasar untuk siswa kelas 9.",
+        "url": "https://forms.gle/misRwbmjHMFf5pQ2A"
+      }
+    ]
+  },
+  {
+    "kelas": "Kelas 9",
+    "mapel": "IPS",
+    "tryouts": [
+      {
+        "title": "Try Out IPS Kelas 9",
+        "description": "Latihan soal IPS untuk siswa kelas 9.",
+        "url": "https://forms.gle/WgeUEvuc7NqmcZKn9"
       }
     ]
   }

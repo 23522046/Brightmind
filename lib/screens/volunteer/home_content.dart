@@ -40,7 +40,7 @@ class HomeContent extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -50,7 +50,7 @@ class HomeContent extends StatelessWidget {
                 child: Image.asset(
                   'assets/simkah_image.png', // Replace with volunteer-related image if available
                   fit: BoxFit.cover,
-                  height: 150,
+                  height: 200,
                   width: double.infinity,
                 ),
               ),
