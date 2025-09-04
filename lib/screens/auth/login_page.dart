@@ -48,31 +48,42 @@ class _LoginPageState extends State<LoginPage> {
 
       final user = userCredential.user;
       if (user != null) {
-        // Fetch user category from Firestore
-        final userDoc =
-            await FirebaseFirestore.instance
-                .collection('users')
-                .doc(user.uid)
-                .get();
+        // Check if email is verified
+        if (user.emailVerified) {
+          // Fetch user category from Firestore
+          final userDoc =
+              await FirebaseFirestore.instance
+                  .collection('users')
+                  .doc(user.uid)
+                  .get();
 
-        if (userDoc.exists) {
-          final category = userDoc['category'];
+          if (userDoc.exists) {
+            final category = userDoc['category'];
 
-          // Navigate based on category
-          if (mounted) {
-            if (category == 'Siswa') {
-              Navigator.pushReplacementNamed(context, '/student/home');
-            } else if (category == 'Relawan') {
-              Navigator.pushReplacementNamed(context, '/volunteer/home');
+            // Navigate based on category
+            if (mounted) {
+              if (category == 'Siswa') {
+                Navigator.pushReplacementNamed(context, '/student/home');
+              } else if (category == 'Relawan') {
+                Navigator.pushReplacementNamed(context, '/volunteer/home');
+              }
+            }
+          } else {
+            // Handle the case where the user document does not exist
+            if (mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('User tidak ditemukan')),
+              );
             }
           }
         } else {
-          // Handle the case where the user document does not exist
-          if (mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('User tidak ditemukan')),
-            );
-          }
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text(
+                'Email belum terverifikasi! Silakan cek inbox email anda untuk memverifikasi akun.',
+              ),
+            ),
+          );
         }
       }
     } on FirebaseAuthException catch (e) {
@@ -101,20 +112,9 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  // Google login (to be implemented)
-  void _onGoogleLogin() {
-    // TODO: implement Google login via AuthProvider
-    Navigator.pushReplacementNamed(context, '/volunteer/home');
-  }
-
-  // Apple login (to be implemented)
-  void _onAppleLogin() {
-    // TODO: implement Apple login via AuthProvider
-  }
-
   // Forgot password action
   void _onForgotPassword() {
-    // TODO: navigate to forgot password page
+    Navigator.pushNamed(context, '/reset-password');
   }
 
   // Navigate to register page

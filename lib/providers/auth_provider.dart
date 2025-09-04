@@ -131,6 +131,14 @@ class AuthProvider with ChangeNotifier {
       );
       user = userCredential.user;
 
+      // Send email verification
+      if (user != null && !user!.emailVerified) {
+        await user!.sendEmailVerification();
+        print('Email verification sent to ${user!.email}');
+      } else {
+        print('Email already verified');
+      }
+
       // Save extra data to Firestore
       await _firestore.collection('users').doc(user!.uid).set({
         'uid': user!.uid,
@@ -182,6 +190,16 @@ class AuthProvider with ChangeNotifier {
     } finally {
       isLoading = false;
       notifyListeners();
+    }
+  }
+
+  Future<void> resetPassword(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      throw e.message ?? "Terjadi kesalahan saat mengirim link reset.";
+    } catch (e) {
+      throw "Terjadi kesalahan: $e";
     }
   }
 }

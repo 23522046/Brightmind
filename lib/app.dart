@@ -1,3 +1,4 @@
+import 'package:brightmind/screens/common/reset_password_page.dart';
 import 'package:brightmind/screens/student/student_home.dart';
 import 'package:brightmind/screens/volunteer/volunteer_home.dart';
 import 'package:flutter/material.dart';
@@ -52,6 +53,7 @@ class App extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
+        '/reset-password': (context) => const ResetPasswordPage(),
         '/student/home': (context) => const StudentHomePage(),
         '/volunteer/home': (context) => const VolunteerHomePage(),
       },
